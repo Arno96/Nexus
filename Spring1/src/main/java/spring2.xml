@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+<bean id = "carObj" class = "com.carspr.Car2" scope="prototype">
+      <constructor-arg value = "Lamborghini"/>
+       <constructor-arg value = "black"/>
+        <constructor-arg value = "50"/>
+       </bean>
+       <bean id = "carObj1" class = "com.carspr.Car2" >
+      <constructor-arg value = "Aston Martin"/>
+       <constructor-arg value = "black"/>
+        <constructor-arg value = "500"/>
+       </bean>
+
+   <bean id = "lamboObj" class = "com.engspr.Lambo" parent="carObj">
+      <constructor-arg value = "5000" index="0"/>
+      
+        <constructor-arg value = "Aventador" index="1"/>
+        <constructor-arg index="5">
+        	<list>
+        		<value>Murcielago </value>
+        		<value>Gallardo </value>
+        		<value>Urus </value>
+        		<value>Huracan </value>
+        			
+        		
+        	</list>
+        </constructor-arg>
+   </bean>
+
+</beans>
