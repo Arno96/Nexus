@@ -1,4 +1,4 @@
-package com.springwebdbf1.SpringFinal_frontend;
+package com.vinayak.ShoppingBackEnd;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
