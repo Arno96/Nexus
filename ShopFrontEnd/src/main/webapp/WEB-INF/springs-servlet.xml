@@ -11,8 +11,9 @@
         http://www.springframework.org/schema/context 
         http://www.springframework.org/schema/context/spring-context-3.2.xsd">
 
-	<context:component-scan base-package="com.frontend.catcontroller" />
-	<context:component-scan base-package="com.vinayak" />
+	<context:component-scan base-package="com.frontend" />
+	<context:component-scan base-package="com.vinayak.Dao" />
+	<context:component-scan base-package="com.vinayak.DBConfig" />
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix">

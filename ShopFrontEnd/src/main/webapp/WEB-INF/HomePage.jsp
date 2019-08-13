@@ -7,10 +7,17 @@
 <title>Home Page</title>
 </head>
 <body>
-<h1>Welcome</h1>
-<a href="getCategory">Add Category</a>
-<a href="viewCategory">View Category</a>
-<a href="addProduct">Add Product</a>
-<a href="viewProduct">View Product</a>
+
+<div align="center">
+		<h1>Welcome Admin</h1>
+		
+		<p style="margin:100px;background-color:cyan;font-weight: bold"> 
+			<a href="categoryForm">Add Category</a><br/>
+			<a href="viewCategories">View Categories</a><br/>
+			<a href="addProduct">Add Product</a><br/>
+			<a href="viewProducts">View All Products</a><br/>
+		</p>
+		
+	</div>
 </body>
 </html>
