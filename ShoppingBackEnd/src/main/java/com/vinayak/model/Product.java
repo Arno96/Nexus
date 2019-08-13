@@ -1,5 +1,6 @@
 package com.vinayak.model;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
@@ -11,7 +12,7 @@ public class Product {
 	private String productName;
 	private String prodesc;
 	
-	@ManyToOne
+	@ManyToOne(cascade=CascadeType.PERSIST)
 	@JoinColumn(name="Cat_Id")
 	private Category cat;
 	

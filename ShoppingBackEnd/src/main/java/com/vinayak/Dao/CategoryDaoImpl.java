@@ -23,7 +23,7 @@ public class CategoryDaoImpl implements CategoryDao{
 		try
 		{
 			Session session=sessionFactory.getCurrentSession(); //hibernate
-			session.save(obj);
+			session.persist(obj);
 			return true;
 		}
 		catch(Exception e)
