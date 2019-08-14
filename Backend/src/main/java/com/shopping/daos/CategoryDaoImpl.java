@@ -12,6 +12,7 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.shopping.entity.Category;
+import com.shopping.entity.Product;
 
 
 @Component
@@ -99,4 +100,22 @@ public class CategoryDaoImpl implements CategoryDao {
 		}
 		return null;
 	}
-}
+
+
+
+	public List<Product> getProduct(int categoryId) {
+		try {
+			Session session=sessionFactory.getCurrentSession();
+			Query q=session.createQuery("from Product where catid=:catid");
+			q.setInteger("catid", categoryId);
+			return q.list();
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		return null;
+	}
+
+	}
+

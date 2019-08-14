@@ -11,6 +11,15 @@
 
 <div align="center">
 	<h1>${errorMsg}</h1>
+	<f:form action="${pageContext.request.contextPath}/delCat" method="get" modelAttribute="cObj">
+	<table>
+	<tr>
+					<td>
+						<input type="submit" value="${btnLabel}">
+					</td>
+				</tr>
+				</table>
+				</f:form>
 </div>
 	
 </body>

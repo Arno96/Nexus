@@ -36,7 +36,7 @@
 						<f:select path="catId">
 								<f:option value="0">---Select Category----</f:option>
 								<c:forEach items="${categories}" var="cObj">
-									<f:option value="${cObj.categoryId}">${cObj.categoryId} ${cObj.categoryName}</f:option>
+									<f:option value="${cObj.categoryId}">${cObj.categoryName}</f:option>
 								</c:forEach>
 							</f:select>
 
