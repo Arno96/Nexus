@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.validation.Valid;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
@@ -13,11 +14,15 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.springvalid.model.Employee;
+import com.springvalid.validators.NameValidator;
 
 
 
 @Controller
 public class EmpController {
+	
+	@Autowired
+	NameValidator nameValidator;
 	
 	@RequestMapping(value="/empForm",method=RequestMethod.GET)
 	public ModelAndView getEmployeeForm(){
@@ -30,7 +35,7 @@ public class EmpController {
 	
 	@RequestMapping(value="/empView",method=RequestMethod.GET)
 	public ModelAndView getAllEmp(@Valid @ModelAttribute(name="empObj") Employee empObj,BindingResult result){
-		//nameValidator.validate(empObj,result);
+		nameValidator.validate(empObj,result);
 		if(result.hasErrors()) {
 			ModelAndView mv=new ModelAndView("EmployeeForm");
 			
